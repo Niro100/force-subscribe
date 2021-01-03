@@ -15,9 +15,6 @@
     "worker": {
       "quantity": 1,
       "size": "free"
-    }
-  }  
-}
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
@@ -30,3 +27,6 @@
     "TG_BOT_TOKEN": {
       "description": "get this value from @BotFather",
       "value": ""
+       }
+    }
+ }
