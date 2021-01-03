@@ -1,14 +1,14 @@
 {
-  "name": "maxx-forcesub-bot",
+  "name": "force-subscribe",
   "description": "This is a telegram bot writen in python for managing group/channel.",
   "keywords": [
     "telegram",
     "eaglescout",
     "forcesub"
   ],
-  "repository": "https://github.com/MaxWizard1/maxx-forcesub-bot",
-  "success_url": "https://github.com/MaxWizard1/maxx-forcesub-bot",
-  "website": "https://github.com/MaxWizard1/maxx-forcesub-bot",  
+  "repository": "https://github.com/Darshanjk/force-subscribe",
+  "success_url": "https://github.com/Darshanjk/force-subscribe",
+  "website": "https://github.com/Darshanjk/force-subscribe",  
   "addons": [],
   "buildpacks": [],
   "formation": {
