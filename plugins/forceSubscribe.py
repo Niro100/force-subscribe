@@ -25,7 +25,7 @@ def _onUnMuteRequest(client, cb):
             if cb.message.reply_to_message.from_user.id == user_id:
               cb.message.delete()
           except UserNotParticipant:
-            client.answer_callback_query(cb.id, text="❗ Join the mentioned 'channel' and press the 'UnMute Me' button again.", show_alert=True)
+            client.answer_callback_query(cb.id, text="❗ මේ'channel'එකට Join වෙලා 'UnMute Me' button එක ඔබන්න.", show_alert=True)
       else:
         client.answer_callback_query(cb.id, text="❗ You are muted by admins for other reasons.", show_alert=True)
     else:
@@ -33,7 +33,7 @@ def _onUnMuteRequest(client, cb):
         client.send_message(chat_id, f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__")
         client.leave_chat(chat_id)
       else:
-        client.answer_callback_query(cb.id, text="❗ Warning: Don't click the button if you can speak freely.", show_alert=True)
+        client.answer_callback_query(cb.id, text="❗ Warning: ඔයාට කතා කරන්න පුලුවන්කම තියෙද්දි Unmute button එක ඔබන්නෙපා!.", show_alert=True)
 
 
 
@@ -50,7 +50,7 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
-              "{}, you are **not subscribed NKL Rockers** my [channel](https://t.me/{}) yet. Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(message.from_user.mention, channel, channel),
+              "{}, **ඔයා අපේ** [channel](https://t.me/{}) subscribe කරලා නෑ තාම පිස්සු කෙලින්නැතුව ඒක Subscribe කරලා එන්න.[join](https://t.me/{}) and **press the button below** to unmute yourself.".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
                   [[InlineKeyboardButton("UnMute Me", callback_data="onUnMuteRequest")]]
